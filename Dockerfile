@@ -1,6 +1,9 @@
 FROM postgres:latest
-ENV POSTGRES_USER=postgres POSTGRES_PASSWORD=postgres
-RUN mkdir -p /var/lib/postgresql/postgres
-RUN chmod -R 777 /var/lib/postgresql/postgres
-VOLUME /var/lib/postgresql/postgres
+
+ENV POSTGRES_USER=postgres
+ENV POSTGRES_PASSWORD=postgres
+
+ENV PGDATA=/var/lib/postgresql/data
+
+VOLUME /var/lib/postgresql/data
 EXPOSE 5432
