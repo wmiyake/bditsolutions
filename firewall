@@ -1,0 +1,2 @@
+sudo firewall-cmd --zone=internal --add-forward-port=port=any:proto=tcp:toport=any:toaddr=192.168.130.0/24
+sudo firewall-cmd --zone=external --add-forward-port=port=any:proto=tcp:toport=any:toaddr=10.1.1.0/24
